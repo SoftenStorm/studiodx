@@ -11,7 +11,7 @@ declare let window: any;
   // Auto Height Layout
   // 
   function update(event) {
-    let elements: any[] = Array.from(document.body.getElementsByClassName('internal-fsb-absolute-layout'));
+    let elements: any[] = Array.from(HTMLHelper.getElementsByClassName('internal-fsb-absolute-layout'));
     elements.reverse().forEach((element) => {
       let children: any[] = [...element.children];
       let maximum = 20;
