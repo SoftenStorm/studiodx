@@ -33,7 +33,7 @@ const LocalizationHelper = {
     const lang = (index == -1) ? null : cookie.substring(index + 5).split(';')[0];
     const key = LocalizationHelper.cleanKeyForComposing(text);
 
-    if (!lang || !LocalizationHelper.getLanguageSpecification()[key]) {
+    if (!lang || lang == 'en' || !LocalizationHelper.getLanguageSpecification()[key]) {
       return LocalizationHelper.encode(text).replace(/\n\n/g, '<br/>').replace(/\n/g, '<br/>');
     } else {
       return LocalizationHelper.encode(LocalizationHelper.getLanguageSpecification()[key] || text).replace(/\n/g, '<br/>');

@@ -1,7 +1,7 @@
 // Auto[Generating:V1]--->
 // PLEASE DO NOT MODIFY BECUASE YOUR CHANGES MAY BE LOST.
 
-import {Base as Scheduler} from '../schedulers/Base';
+import Scheduler from '../schedulers/Base';
 import {scheduler} from '../../server';
 import schedule from 'node-schedule';
 

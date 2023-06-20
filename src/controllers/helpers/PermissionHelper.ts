@@ -101,6 +101,11 @@ const PermissionHelper = {
           resolve(true);
           return;
         }
+        
+        if (referencings['_id']) {
+          referencings['id'] = referencings['_id'];
+          delete referencings['_id'];
+        }
 
         if (isRequiringTransaction && target.source == SourceType.Relational && !transaction.relationalDatabaseTransaction) throw new Error('P1 Error: using permission, you have to turn on the transaction feature (relational).');
         if (isRequiringTransaction && target.source == SourceType.Document && !transaction.documentDatabaseSession) throw new Error('P1 Error: using permission, you have to turn on the transaction feature (document).');
@@ -241,6 +246,11 @@ const PermissionHelper = {
                           data[`${current.group}.${current.relations[previousGroup].sourceEntity}`] = referencings[key].toString();
                         }
                       }
+                    }
+
+                    if (Object.keys(data).length == 0) {
+                      referencings = null;
+                      break;
                     }
 
                     const baseSchema = ProjectConfigurationHelper.getDataSchema().tables[current.group];

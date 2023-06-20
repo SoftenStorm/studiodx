@@ -3,7 +3,7 @@
 
 import {HierarchicalDataRow, ActionType} from "../helpers/DatabaseHelper";
 import {DataTableSchema} from "../helpers/SchemaHelper";
-import {Base as Connector} from '../connectors/Base';
+import Connector from '../connectors/Base';
 
 const sitemapDictionary = {};
 

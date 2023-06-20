@@ -2,7 +2,7 @@
 // PLEASE DO NOT MODIFY BECUASE YOUR CHANGES MAY BE LOST.
 
 import {HierarchicalDataTable, SourceType} from "../helpers/DatabaseHelper";
-import {Base as Worker} from '../workers/Base';
+import Worker from '../workers/Base';
 import {queue} from '../../server';
 
 const instanceDictionary: {[Identifier: string]: any} = {};

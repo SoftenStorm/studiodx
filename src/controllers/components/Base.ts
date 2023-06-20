@@ -151,7 +151,7 @@ class Base {
   }
 }
 
-export {Base};
+export default Base;
 
 // <--- Auto[Generating:V1]
 // PLEASE DO NOT MODIFY BECUASE YOUR CHANGES MAY BE LOST.

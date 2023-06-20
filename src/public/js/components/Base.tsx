@@ -297,7 +297,8 @@ class Button extends React.Component {
   }
 }
 
-export {IBaseProps, IBaseState, DefaultBaseProps, DefaultBaseState, Button, Base};
+export default Base;
+export {IBaseProps, IBaseState, DefaultBaseProps, DefaultBaseState, Button};
 
 // <--- Auto[Generating:V1]
 // PLEASE DO NOT MODIFY BECUASE YOUR CHANGES MAY BE LOST.

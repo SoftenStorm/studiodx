@@ -4,9 +4,9 @@ import {ProjectConfigurationHelper} from '../helpers/ProjectConfigurationHelper'
 import {RequestHelper} from '../helpers/RequestHelper';
 import {RenderHelper} from '../helpers/RenderHelper';
 import {DataTableSchema} from '../helpers/SchemaHelper';
-import {Base} from './Base';
+import $Base from './Base';
 
-class TestController extends Base {
+class TestController extends $Base {
   constructor(request: Request, response: Response, template: string) {
     super(request, response, template);
     try {
